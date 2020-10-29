@@ -1,0 +1,19 @@
+{
+  "name": "guia-hoteles",
+  "version": "1.0.0",
+  "description": "Primer projecto",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/porfirioR/guia-hoteles.git"
+  },
+  "author": "Porfirio Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/porfirioR/guia-hoteles/issues"
+  },
+  "homepage": "https://github.com/porfirioR/guia-hoteles#readme"
+}
