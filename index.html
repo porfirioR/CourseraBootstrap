@@ -9,92 +9,127 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.css">
 
-  <title>Hello, world!</title>
+  <title>Guia Hoteles!</title>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Hoteles</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="./precios.html">Precios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Términos</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="jumbotron">
     <h1>Hoteles</h1>
   </div>
   <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </nav>
     <div class="row">
       <div class="card-hotel d-flex flex-column justify-content-between">
-        <div>
-          <h1>Titulo1</h1>
+        <p>
+          <h1>¿Cómo funciona?</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, at. Eius minus veniam mollitia enim.</p>
-        </div>
+        </p>
       </div>
-    </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>Titulo2</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
+      <div class="card-hotel d-flex flex-column justify-content-between">
+        <p>
+          <h1>¿Dónde puedo reservar?</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </p>
       </div>
-    </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>Titulo3</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid necessitatibus esse.</p>
+      <div class="card-hotel d-flex flex-column justify-content-between">
+        <p>
+          <h1>¿Cómo pago?</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid necessitatibus esse.</p>
+        </p>
       </div>
     </div>
   </div>
+  <hr>
+  <img src="./images/hotel-first.jpg" class="img-fluid" style="height: 300px;" alt="Responsive image">
   <div class="d-flex flex-wrap">
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloA</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus delectus dolores ut cupiditate enim.</p>
+  <!-- <div class="card-columns"> -->
+    <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elitcupiditate  elitcup elitcupiditate enim. elitcupiditate enim. elitcupiditate enim.iditate enim. elitcupiditate enim.enim.</p>
       </div>
       <div>
         <button class="btn btn-primary btn-reserva">Aceptar</button>
       </div>
     </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloB</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <div class="card card-hotel d-flex flex-column  justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem ip adipisicing elit. Esse doloribus  elitcupiditate enim. ate enim. eeate enim. eate enim. elitcupiditate enim.delectus dolores ut cupiditate enim.</p>
       </div>
       <div>
-        <button class="btn btn-primary btn-reserva">Boton2</button>
+        <button class="btn btn-primary btn-reserva"><span class="oi oi-plus"></span>Reservar</button>
       </div>
     </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloC</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iste!</p>
+    <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus delectus dolnim.</p>
       </div>
       <div>
         <button class="btn btn-primary btn-reserva">ir a</button>
       </div>
     </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloD</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate optio vitae eveniet.</p>
+    <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipi fugit voluptas exercitationem perferendis error deltis ea expedita?</p>
       </div>
       <div>
         <button class="btn btn-primary btn-reserva">Hacer algo</button>
       </div>
     </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloE</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iste!</p>
+    <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse doloribus delectus dolores ut cupiditate enim.</p>
       </div>
       <div>
         <button class="btn btn-primary btn-reserva">Hacer algo</button>
       </div>
     </div>
-    <div class="card-hotel d-flex flex-column justify-content-between">
-      <div>
-        <h1>TituloF</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum necessitatibus placeat temporibus molestias deserunt dignissimos fugiat deleniti repellendus velit. Reiciendis?</p>
+    <div class="card card-hotel d-flex flex-column justify-content-between ml-2">
+      <div class="card-body">
+        <h5 class="card-title">Guaraní</h5>
+        <h6 class="card-subtitle text-muted">Paraguay</h6>
+        <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur uid,cing elit. Aliquid, totam nemo, labore possimus saepe fugit voluptas exercitatuid,cing elit. Aliquid, totam nemo, labore possimus saepe fugit voluptas exercitatuid,cing elit. Aliquid, totam nemo, labore possimus saepe fugit voluptas exercitat adipisicing elit. Esse doloribus delectus dolores ut cupiditate enim.</p>
       </div>
       <div>
         <button class="btn btn-primary btn-reserva">Acción</button>
       </div>
     </div>
-  </div>
   </div>
   <footer>
     <div class="row">
@@ -106,9 +141,10 @@
       </div>
       <div class="col-sm-4 align-items-center">
         <address>
-          Lorem, ipsum dolor. Luque, Argentina
-          Lorem ipsum dolor sit.
-          hola@hola.com
+          <h3>Lorem, ipsum dolor. </h3>
+          <p><span class="oi oi-home footer-address-icon"></span>Luque, Argentina</p>
+          <p><span class="oi oi-phone footer-address-icon"></span>Lorem ipsum dolor sit.</p>
+          <p><span class="oi oi-inbox footer-address-icon"></span>hola@hola.com</p>
         </address>
       </div>
       <div class="col-sm-4 align-items-end">
@@ -120,7 +156,6 @@
     </div>
   </footer>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
