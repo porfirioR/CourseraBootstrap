@@ -40,19 +40,30 @@
       </ol>
     </nav>
     <div class="row">
-      <div class="card-hotel d-flex flex-column justify-content-between">
+      <div class="col-sm-4">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona"  aria-controls="multiCollapse1">¿Cómo funciona?</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva" aria-controls="multiCollapse2">¿Dónde puedo reservar?</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago" aria-controls="multiCollapse3">¿Cómo pago?</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 collapse multi-collapse" id="funciona">
         <p>
           <h1>¿Cómo funciona?</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, at. Eius minus veniam mollitia enim.</p>
         </p>
       </div>
-      <div class="card-hotel d-flex flex-column justify-content-between">
+      <div class="col-sm-4 collapse multi-collapse" id="reserva">
         <p>
           <h1>¿Dónde puedo reservar?</h1>
           <p>Lorem ipsum dolor sit amet.</p>
         </p>
       </div>
-      <div class="card-hotel d-flex flex-column justify-content-between">
+      <div class="col-sm-4 collapse multi-collapse" id="pago">
         <p>
           <h1>¿Cómo pago?</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquid necessitatibus esse.</p>
