@@ -1,0 +1,48 @@
+/* variables $(pesos) en sass*/
+$yellow: #fffa19;
+$green: #67eb34;
+$red: #db3309;
+// mixin @ arroba en sass
+@mixin margenes($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin padding-top-bottom-color($top, $bottom, $color) {
+    color: $color;
+    @include margenes(50px, 0px);
+}
+
+.jumbotron {
+    background-color: $red;
+    @include padding-top-bottom-color(50px, 0px, black);
+}
+
+footer {
+    padding: 10px 10px 0 10px;
+    background-color: $green;
+    @include margenes(10px, 0px);
+
+}
+
+.card-hotel {
+    flex: 1 200px;
+    @include margenes(10px, 0px);
+}
+
+.card-subtitle {
+    background-color: $yellow;
+}
+
+.btn-reserva {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.footer-address-icon {
+    padding-right: 10px;
+}
+
+.tab-content {
+    padding-top: 10px;
+}

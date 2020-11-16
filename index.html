@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles2.css">
   <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.css">
 
   <title>Guia Hoteles!</title>
@@ -167,8 +167,7 @@
           <h6 class="card-subtitle text-muted">Paraguay</h6>
           <img class="card-img-top" src="./images/hotel.jpg" alt="hotel img">
           <p class="card-text">Lorem ipsum dolor sit amet.</p>
-          <button type="button" class="btn btn-outline-success" data-target="#contacto"
-            data-toggle="modal">Contacto</button>
+          <button type="button" class="btn btn-outline-success" data-target="#contacto" data-toggle="modal" id="contactoBtn">Contacto</button>
         </div>
         <div>
           <button class="btn btn-primary btn-reserva" data-target="#reservar" data-toggle="modal">Acción</button>
@@ -269,6 +268,24 @@
       $("[data-toggle='popover']").popover();
       $(".carousel").carousel({
         internal: 100
+      });
+      $('#contacto').on('show.bs.modal', function(e) {
+        console.log('el contacto esta mostrando');
+        $('#contactoBtn').removeClass('btn-outline-success');
+        $('#contactoBtn').addClass('btn-primary');
+        $('#contactoBtn').prop('disabled', true);
+      });
+      $('#contacto').on('shown.bs.modal', function(e) {
+        console.log('el contacto se mostró');
+      });
+      $('#contacto').on('hide.bs.modal', function(e) {
+        console.log('el contacto se oculta');
+      });
+      $('#contacto').on('hidden.bs.modal', function(e) {
+        console.log('el contacto se ocultó');
+        $('#contactoBtn').removeClass('btn-primary');
+        $('#contactoBtn').addClass('btn-outline-success');
+        $('#contactoBtn').prop('disabled', false);
       });
     });
   </script>
