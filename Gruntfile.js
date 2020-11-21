@@ -45,10 +45,9 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: './',
-					src: 'images/*.{png,gif,jpg,jpeg}',
-					dest: 'dist/images'
-				}]
-
+					src: '/images/*.{png,jpg,jpeg,gif}',
+					dest: 'dist'
+			}]
 			}
 		},
 		copy: {
@@ -74,7 +73,6 @@ module.exports = function (grunt) {
 		clean: {
 			build: {
 				src: ['dist/'] //clean the distribution folder
-
 			}
 		},
 		cssmin: {
@@ -90,9 +88,12 @@ module.exports = function (grunt) {
 				length: 20
 			},
 			release: {
-				files: {
-					src: ['dist/css/*.css', 'dist/js/*.js']
-				}
+				files: [{
+					src: [
+						'dist/js/*.js',
+						'dist/css/*.css'
+					]
+				}]
 			},
 		},
 		concat: {
@@ -104,7 +105,7 @@ module.exports = function (grunt) {
 		useminPrepare: {
 			foo: {
 				dest: 'dist',
-				src: ['index.html']
+				src: ['index.html', 'about.html', 'precios.html', 'contacto.html']
 			},
 			options: {
 				flow: {
@@ -120,34 +121,24 @@ module.exports = function (grunt) {
 								generated.options = {
 									keepSpecialComments: 0,
 									rebase: false
-
 								}
-
 							}
 						}]
-
 					}
-
 				}
-
 			}
 		},
 		usemin: {
-			html: ['dist/index.html'],
+			html: ['dist/index.html', 'dist/about.html', 'dist/precios.html', 'dist/contacto.html'],
 			options: {
 				assetsDir: ['dist', 'dist/css', 'dist/js']
-
 			}
-
 		}
 	});
 
 	grunt.registerTask('css', ['sass']);
-
 	grunt.registerTask('default', ['browserSync', 'watch']);
-
 	grunt.registerTask('img:compress', ['imagemin']);
-
 	grunt.registerTask('build', [
 		'clean', //Borramos el contenido de dist
 		'copy', //Copiamos los archivos html a dist
