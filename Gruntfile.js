@@ -45,8 +45,8 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: './',
-					src: 'img/*.{png,gif,jpg,jpeg}',
-					dest: 'dist/'
+					src: 'images/*.{png,gif,jpg,jpeg}',
+					dest: 'dist/images'
 				}]
 
 			}
@@ -61,6 +61,15 @@ module.exports = function (grunt) {
 					dest: 'dist'
 				}]
 			},
+			font: {
+				files: [{
+					expand: true,
+					dot: true,
+					cwd: 'node_modules/open-iconic/font', //current working directory
+					src: ['fonts/*.*'],
+					dest: 'dist'
+				}]
+			}
 		},
 		clean: {
 			build: {
@@ -76,13 +85,15 @@ module.exports = function (grunt) {
 		},
 		filerev: {
 			options: {
+				encoding: 'uft8',
 				algorithm: 'md5',
-				length: 15
+				length: 20
 			},
-			files: {
-				src: ['dist/css/*.css', 'dist/js/*.js']
-
-			}
+			release: {
+				files: {
+					src: ['dist/css/*.css', 'dist/js/*.js']
+				}
+			},
 		},
 		concat: {
 			options: {
@@ -130,16 +141,6 @@ module.exports = function (grunt) {
 
 		}
 	});
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-usemin');
-	grunt.loadNpmTasks('grunt-filerev');
 
 	grunt.registerTask('css', ['sass']);
 
