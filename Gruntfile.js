@@ -40,16 +40,17 @@ module.exports = function (grunt) {
 
 			}
 		},
-		imagemin: {
-			dynamic: {
-				files: [{
-					expand: true,
-					cwd: './',
-					src: '/images/*.{png,jpg,jpeg,gif}',
-					dest: 'dist'
-			}]
-			}
-		},
+        imagemin: {
+            dynamic:{
+                files:[{
+                    expand:true,
+                    cwd:'./',
+                    src:'images/*.{png,gif,jpg,jpeg}',
+                    dest:'dist/'
+
+                }]
+            }
+        },
 		copy: {
 			html: {
 				files: [{
